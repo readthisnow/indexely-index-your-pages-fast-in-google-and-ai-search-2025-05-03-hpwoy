@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Landing Page</title>
+    <title>Index Your Pages FAST in Google and AI Search</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -55,7 +55,7 @@
                         Revolutionize Your Search Visibility with Indexely
                     </h1>
                     <p class="text-xl md:text-2xl text-gray-300 mb-12">
-                        Get your content indexed in Google and AI search engines up to 10x faster. Join thousands of successful websites already using Indexely.
+                        Get your content indexed in Google and AI Search (such as ChatGPT, OpenAI) up to 10x faster. Join thousands of successful websites already using Indexely.
                     </p>
                     <a href="https://laptoplifepro.com/speedyindex" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25">
                         Start Your Free Trial Today
@@ -234,6 +234,49 @@
                     </div>
                 </div>
             </section>
+
+<section class="py-24 bg-gray-800/50" x-data="{ lightboxOpen: false, lightboxImage: '' }">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">See Indexely in Action</h2>
+        <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto text-base sm:text-lg">
+            Curious how fast and effective Indexely really is? Check out real-time indexing proof from actual client campaigns—100% indexed links in just days!
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <template x-for="img in [
+                'indexing result 1.jpg',
+                'indexing result 2.jpg',
+                'indexing result 3.jpg',
+                'indexing result 4.jpg'
+            ]" :key="img">
+                <img 
+                    :src="img" 
+                    alt="Indexing result"
+                    class="w-full h-auto rounded-xl shadow-lg hover:shadow-2xl transition duration-300 cursor-zoom-in object-cover"
+                    @click="lightboxImage = img; lightboxOpen = true"
+                >
+            </template>
+        </div>
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div 
+        x-show="lightboxOpen"
+        @click.away="lightboxOpen = false"
+        @keydown.escape.window="lightboxOpen = false"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+        x-transition
+    >
+        <div class="relative w-full max-w-3xl mx-auto">
+            <button 
+                class="absolute top-2 right-2 text-white text-3xl focus:outline-none"
+                @click="lightboxOpen = false"
+                aria-label="Close"
+            >&times;</button>
+            <img :src="lightboxImage" alt="Zoomed image" class="w-full h-auto max-h-[90vh] rounded-lg shadow-2xl object-contain">
+        </div>
+    </div>
+</section>
+
 
             <section class="py-24">
                 <div class="container mx-auto px-6">
